@@ -5,6 +5,8 @@ YACC     = bison -d -y -r all --debug
 
 OBJ	 = asm.tab.o asm.lex.o
 
+.SUFFIXES: .o .c .y .lex
+
 %.o : %.c
 	$(CC) -o $@ $<
 %.lex.c : %.lex
